@@ -29,7 +29,8 @@ public class GameInput : MonoBehaviour {
         Gamepad_Interact,
         Gamepad_InteractAlternate,
         Gamepad_Pause,
-        Reload
+        Reload,
+        Reset
     }
 
 
