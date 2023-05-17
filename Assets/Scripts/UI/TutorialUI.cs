@@ -43,6 +43,7 @@ public class TutorialUI : MonoBehaviour {
         keyMoveLeftText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Left);
         keyMoveRightText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Right);
         keyInteractText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Interact);
+        keyInteractText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Interact);
         keyInteractAlternateText.text = GameInput.Instance.GetBindingText(GameInput.Binding.InteractAlternate);
         keyPauseText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Pause);
         keyGamepadInteractText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Gamepad_Interact);

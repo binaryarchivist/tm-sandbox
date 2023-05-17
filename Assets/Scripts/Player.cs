@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IKitchenObjectParent {
 
@@ -26,8 +27,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
     private bool isWalking;
     private Vector3 lastInteractDir;
     private BaseCounter selectedCounter;
-    private KitchenObject kitchenObject;
-
+    public KitchenObject kitchenObject;
 
     private void Awake() {
         if (Instance != null) {
@@ -58,8 +58,20 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
     }
 
     private void Update() {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
+        }
+        
         HandleMovement();
         HandleInteractions();
+    }
+
+    private void Restart()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        
+        SceneManager.LoadScene(currentSceneIndex);
     }
 
     public bool IsWalking() {
