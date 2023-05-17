@@ -134,7 +134,7 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
                     // Can move only on the Z
                     moveDir = moveDirZ;
                 } else {
-                    // Cannot move in any direction
+                    // Cannotg move in any direction
                 }
             }
         }
